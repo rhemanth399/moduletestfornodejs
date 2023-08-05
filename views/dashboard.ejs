@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Books Inventory</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    </head>
+    <body>
+      <div class="container-fluid">
+        <h1 class="display-4 text-center py-1">Books Inventory</h1>
+        <form class="row row-cols-lg-auto g-3">
+          <div class="col-sm-2">
+            <label for="title" class="visually-hidden">Book Title</label> <input
+              type="text" name="title" class="form-control" id="title" placeholder="Book Title" />
+          </div>
+          <div class="col-sm-2">
+            <label for="author" class="visually-hidden">Book Author</label> <input
+              type="text" class="form-control" name="author" id="author"
+              placeholder="Book Author" />
+          </div>
+          <div class="col-sm-2">
+            <label for="price" class="visually-hidden">Book Price</label> <input
+              type="number" class="form-control" name="price" id="price"
+              placeholder="Book Price" />
+          </div>
+          <div class="col-sm-2">
+            <label for="inputMessage" class="visually-hidden">Book category</label> <input
+              type="text" class="form-control" name="category" id="category"
+              placeholder="Book category" />
+          </div>
+          <div class="col-sm-2">
+            <button type="submit" class="add-book btn btn-primary">Add Book</button>
+          </div>
+        </form>
+        
+        <div class="container-fluid my-2">
+          <div class="row" id="item-list">
+          </div>
+        </div>
+        
+        <br><br>
+      <form action='/logout' method="POST">
+        <button> Logout </button>
+      </form>
+
+      </div>
+    
+      <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+      <script src="/browser.js"> 
+      </script>
+      
+    </body>
+    </html>
